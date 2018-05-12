@@ -2,7 +2,7 @@ package GameBase;
 
 
 /**
- * Only holds the option panel, no logic or variables
+ * Only holds text and options panel of UI, no logic or variables
  */
 public final class UserInterface {
 
@@ -26,10 +26,9 @@ public final class UserInterface {
         System.out.println("2.Register a new player");
         System.out.println("3.Create a new Guild");
         System.out.println("4.Checkout the Market");
-        System.out.println("5.Enhance a equipment part");
-        System.out.println("6.Choose a character and act with it");
-        System.out.println("7.Player fight");
-        System.out.println("8. Exit");
+        System.out.println("5.Enhance/Drop/Equip an item");
+        System.out.println("6.Player fight");
+        System.out.println("7. Exit");
         System.out.print("Enter your action: ");
 
     }
@@ -64,6 +63,47 @@ public final class UserInterface {
         System.out.println("2.Hunters");
         System.out.println("3.Merchants");
         System.out.println("Your choise: ");
-
     }
+
+    public static void MarketPreInfo()
+    {
+        System.out.println();
+        System.out.println("Choose a player to Checkout the market:");
+    }
+
+    public static void MarketOptions()
+    {
+        System.out.println();
+        System.out.println("Market options");
+        System.out.println("1.List all items");
+        System.out.println("2.Buy an item");
+        System.out.println("3.Put an item for sale");
+    }
+
+    public static void AddItemOptions()
+    {
+        System.out.println();
+        System.out.println("What item would you like to sell");
+        System.out.println("1.Weapon");
+        System.out.println("2.Armor");
+        System.out.println("3.Material");
+        System.out.println("Your choise: ");
+    }
+
+   public static void SellItemOptions()
+   {
+       System.out.println();
+       System.out.println("Which item you would like to buy?");
+       System.out.println("Item list:");
+   }
+
+   public static void ActWithPlayerInfo()
+   {
+       System.out.println();
+       System.out.println("1.Drop Item");
+       System.out.println("2.Try to enhance an item");
+       System.out.println("3.Equip an item");
+       System.out.println("4.Take off an item");
+       System.out.println("Your choise");
+   }
 }

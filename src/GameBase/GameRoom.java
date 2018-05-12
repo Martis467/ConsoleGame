@@ -1,9 +1,10 @@
 package GameBase;
 
 import DatabaseController.DatabaseController;
+import GameBase.Player.Inventory;
+import GameBase.Player.Player;
 
 
-import java.util.List;
 import java.util.Scanner;
 import java.util.Vector;
 import java.util.regex.Matcher;
@@ -20,8 +21,8 @@ public class GameRoom {
     public GameRoom ()
     {
         playerList = new Vector<Player>();
-        market = new Market();
         db = new DatabaseController();
+        market = new Market(db);
         pattern = Pattern.compile("[a-zA-Z0-9]*"); //Regex for allowing only letters and numbers
 
         db.LoadPlayers(playerList);
@@ -66,17 +67,14 @@ public class GameRoom {
 
                 case 5:
                     //Enhance/Drop/Equip an item
+                    ActWithPlayer();
                     break;
 
                 case 6:
-                    //Trade with another player
-                    break;
-
-                case 7:
                     //Player fight
                     break;
 
-                case 8:
+                case 7:
                     //Exit
                     option = -1;
                     break;
@@ -168,9 +166,16 @@ public class GameRoom {
         ListAllPlayer(true);
         Scanner scanner = new Scanner(System.in);
         int choise = scanner.nextInt();
+
+        if (!ValidChoise(choise, 0, playerList.capacity()))
+            choise = scanner.nextInt();
+        if (!ValidChoise(choise, 0, playerList.capacity()))
+            return;
+
         Player pl;
 
-        if(!playerList.elementAt(choise-1).HasEnoughMoney(db,10000)) {
+        if(!playerList.elementAt(choise-1).HasEnoughMoney(db,10000))
+        {
             System.out.println("The player Does not have enough gold");
             return;
         }
@@ -196,11 +201,8 @@ public class GameRoom {
         String association="";
 
         choise = scanner.nextInt();
-        if (choise > 3 || choise <= 0)
-        {
-            System.out.println("Wrong choise try again:");
+        if(!ValidChoise(choise, 0, 3))
             choise = scanner.nextInt();
-        }
 
         switch (choise)
         {
@@ -237,8 +239,74 @@ public class GameRoom {
 
     private void EnterMarket()
     {
-        
+        //Player choise to go in to the market
+        UserInterface.MarketPreInfo();
+
+        ListAllPlayer(true);
+        Scanner scanner = new Scanner(System.in);
+        int choise = scanner.nextInt();
+
+        if (!ValidChoise(choise, 0, playerList.capacity()))
+            choise = scanner.nextInt();
+
+        if (!ValidChoise(choise, 0, playerList.capacity()))
+            return;
+
+        Player pl = playerList.elementAt(choise-1);
+
+        //Market Options
+        UserInterface.MarketOptions();
+        choise = scanner.nextInt();
+        if (!ValidChoise(choise, 0, 3))
+            choise = scanner.nextInt();
+
+        if (!ValidChoise(choise, 0, 3))
+            return;
+
+        switch (choise)
+        {
+            case 1: market.ListOffers(false); break;
+            case 2: market.BuyOffer(pl); break;
+            case 3: market.AddOffer(pl); break;
+            default: break;
+        }
+
     }
+
+    private void ActWithPlayer()
+    {
+        System.out.println("Choose a player:");
+        Scanner scanner = new Scanner(System.in);
+        ListAllPlayer(true);
+
+        int choise = scanner.nextInt();
+
+        if (!ValidChoise(choise, 0, playerList.capacity()))
+            choise = scanner.nextInt();
+
+        if (!ValidChoise(choise, 0, playerList.capacity()))
+            return;
+
+        Player pl = playerList.elementAt(choise-1);
+
+        Inventory inventory = db.LoadInventory(pl.getUsername());
+        inventory.SetDB(db);
+
+        UserInterface.ActWithPlayerInfo();
+
+        choise = scanner.nextInt();
+
+        switch (choise)
+        {
+            case 1: inventory.DropItem(pl); break;
+            case 2: inventory.EnchanceItem(pl); break;
+            case 3: inventory.EquipItem(pl); break;
+            case 4: inventory.TakeOffItem(pl); break;
+            default: break;
+        }
+
+    }
+
     ///Helper functions-------------------------------------------------------------------
 
     /**
@@ -311,6 +379,28 @@ public class GameRoom {
             return false;
 
         return true;
+    }
+    //Validates if number belongs to an interval
+    private boolean ValidChoise(int choise, int low, int high)
+    {
+        if(choise <= low || choise > high)
+        {
+            System.out.println("Wrong choise, please try again");
+            return false;
+        }
+        return true;
+    }
+    private int GetPlayerInventoryId(String username)
+    {
+        String sql = "SELECT Id FROM Inventory WHERE "
+                + "Player = " + "'" + username + "'"
+                + " LIMIT 1;";
+        int inventoryId = db.QuerryFirst(sql,"Id");
+
+        if (inventoryId == -1)
+            System.out.println("Something went very very wrong while adding a material, player has no inventory");
+
+        return inventoryId;
     }
 
 }

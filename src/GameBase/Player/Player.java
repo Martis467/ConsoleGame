@@ -1,7 +1,8 @@
-package GameBase;
+package GameBase.Player;
 
 
 import DatabaseController.DatabaseController;
+import GameBase.Guild;
 
 public class Player {
 
