@@ -1,6 +1,8 @@
 package GameBase;
 
 
+import DatabaseController.DatabaseController;
+
 public class Player {
 
     private String username;
@@ -51,5 +53,18 @@ public class Player {
 
     public void setGuild(Guild guild) {
         this.guild = guild;
+    }
+
+    //Check if player can purhcase item
+    public boolean HasEnoughMoney(DatabaseController db, int fee) {
+        String col = "PlayerGold";
+        String sql = "SELECT " + col + " "
+                    + "FROM GuildLayout "
+                    + "WHERE GuildMember = '" + username + "'"
+                    + "LIMIT 1;";
+        int gold = db.QuerryFirst(sql, col);
+
+        if(gold - fee >= 0) return true;
+        else return false;
     }
 }

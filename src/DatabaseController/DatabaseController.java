@@ -74,7 +74,13 @@ public class DatabaseController {
 
     }
 
-    public Vector<String> QuerryString(String sql, String columnName)
+    /**
+     *
+     * @param sql statement to be executed
+     * @param columnName from which the strings are parsed
+     * @return  a vector of strings
+     */
+    public Vector<String> QuerryVector(String sql, String columnName)
     {
         Vector<String> guilds = new Vector<>();
         try {
@@ -97,7 +103,40 @@ public class DatabaseController {
         return guilds;
     }
 
-    public boolean QuerryAdd(String sql)
+    /**
+     *
+     * @param sql
+     * @param columnName
+     * @return
+     */
+    public int QuerryFirst(String sql, String columnName)
+    {
+        int value = -1;
+        try {
+            Statement statement = con.createStatement();
+            ResultSet rs = statement.executeQuery(sql);
+
+            while (rs.next())
+            {
+                value = rs.getInt(columnName);
+            }
+
+            rs.close();
+            statement.close();
+            return value;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return value;
+    }
+
+    /**
+     *
+     * @param sql
+     * @return true - on success false - if error occurred
+     */
+    public boolean Querry(String sql)
     {
         try {
             Statement statement = con.createStatement();
@@ -109,6 +148,7 @@ public class DatabaseController {
 
         }
     }
+
 
 
 

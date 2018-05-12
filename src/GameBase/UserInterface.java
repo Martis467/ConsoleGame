@@ -37,11 +37,33 @@ public final class UserInterface {
     {
         System.out.println();
         System.out.println("To register a new player you must enter these fields:");
-        System.out.println("Username: Only letters and number allowed");
-        System.out.println("Starting level is 1 with a 120 power");
-        System.out.println("Power cannot be more than 350");
-        System.out.println("You can't create a new guild unless you are above level 30, but you can join one");
-        System.out.print("Enter Username: ");
+        System.out.println("Username: Only letters and number allowed and can be up to 25 characters");
+        System.out.println("Starting level is 1 with a 120 power and 1000 gold");
+        System.out.println("You can't create a new guild unless you are above level 30, you can only join one");
+        System.out.println("Enter Username: ");
+
+    }
+
+    public static void GuildCreationIntro()
+    {
+        System.out.println("Guild Creation Fee is 10k gold");
+        System.out.println("Choose a player that will create the guild:");
+    }
+
+    public static void GuildCreationName()
+    {
+        System.out.println();
+        System.out.println("To create a new guild you must enter a name and choose an association:");
+        System.out.println("Name: Only letters and number allowed and can be up to 25 characters");
+    }
+    public static void GuildCreationAssociation()
+    {
+        System.out.println();
+        System.out.println("Association:");
+        System.out.println("1.Thieves");
+        System.out.println("2.Hunters");
+        System.out.println("3.Merchants");
+        System.out.println("Your choise: ");
 
     }
 }
