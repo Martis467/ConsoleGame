@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6763e701-1dbc-47fc-8278-871183bc7846" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/GameBase/Player/Equipment.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/GameBase/Player/Inventory.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/DatabaseController/DatabaseController.java" afterPath="$PROJECT_DIR$/src/DatabaseController/DatabaseController.java" />
       <change beforePath="$PROJECT_DIR$/src/GameBase/GameRoom.java" afterPath="$PROJECT_DIR$/src/GameBase/GameRoom.java" />
-      <change beforePath="$PROJECT_DIR$/src/GameBase/Items/Armor.java" afterPath="$PROJECT_DIR$/src/GameBase/Items/Armor.java" />
-      <change beforePath="$PROJECT_DIR$/src/GameBase/Items/Material.java" afterPath="$PROJECT_DIR$/src/GameBase/Items/Material.java" />
-      <change beforePath="$PROJECT_DIR$/src/GameBase/Items/Weapon.java" afterPath="$PROJECT_DIR$/src/GameBase/Items/Weapon.java" />
-      <change beforePath="$PROJECT_DIR$/src/GameBase/Market.java" afterPath="$PROJECT_DIR$/src/GameBase/Market.java" />
-      <change beforePath="$PROJECT_DIR$/src/GameBase/Offer.java" afterPath="$PROJECT_DIR$/src/GameBase/Offer.java" />
-      <change beforePath="$PROJECT_DIR$/src/GameBase/Player.java" afterPath="$PROJECT_DIR$/src/GameBase/Player/Player.java" />
+      <change beforePath="$PROJECT_DIR$/src/GameBase/Player/Equipment.java" afterPath="$PROJECT_DIR$/src/GameBase/Player/Equipment.java" />
+      <change beforePath="$PROJECT_DIR$/src/GameBase/Player/Inventory.java" afterPath="$PROJECT_DIR$/src/GameBase/Player/Inventory.java" />
       <change beforePath="$PROJECT_DIR$/src/GameBase/UserInterface.java" afterPath="$PROJECT_DIR$/src/GameBase/UserInterface.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,16 +18,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameRoom.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameRoom.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GameBase/GameRoom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="391" column="5" lean-forward="true" selection-start-line="383" selection-start-column="4" selection-end-line="391" selection-end-column="5" />
+            <state relative-caret-position="-142">
+              <caret line="75" column="28" lean-forward="false" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ListAllPlayer#0;class#GameRoom#0" expanded="false" />
                 <element signature="method#RegisterNewPlayer#0;class#GameRoom#0" expanded="false" />
                 <element signature="method#CreateNewGuild#0;class#GameRoom#0" expanded="false" />
+                <element signature="method#EnterMarket#0;class#GameRoom#0" expanded="false" />
                 <element signature="docComment;method#PickGuild#0;class#GameRoom#0" expanded="false" />
                 <element signature="method#PickGuild#0;class#GameRoom#0" expanded="false" />
                 <element signature="docComment;method#PickName#0;class#GameRoom#0" expanded="false" />
@@ -46,25 +40,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Inventory.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Inventory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameBase/Player/Inventory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+            <state relative-caret-position="694">
+              <caret line="62" column="72" lean-forward="false" selection-start-line="62" selection-start-column="72" selection-end-line="62" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3153#3154#0" expanded="true" />
-                <element signature="e#3178#3179#0" expanded="true" />
-                <element signature="e#3211#3212#0" expanded="true" />
-                <element signature="e#3239#3240#0" expanded="true" />
-                <element signature="e#3267#3268#0" expanded="true" />
-                <element signature="e#3294#3295#0" expanded="true" />
-                <element signature="e#3331#3332#0" expanded="true" />
-                <element signature="e#3363#3364#0" expanded="true" />
-                <element signature="e#3396#3397#0" expanded="true" />
-                <element signature="e#3425#3426#0" expanded="true" />
-                <element signature="e#3469#3470#0" expanded="true" />
-                <element signature="e#3505#3506#0" expanded="true" />
+                <element signature="method#EnhanceItem#0;class#Inventory#0" expanded="false" />
+                <element signature="method#EnhanceWeapon#0;class#Inventory#0" expanded="false" />
+                <element signature="method#EnhanceArmor#0;class#Inventory#0" expanded="false" />
+                <element signature="method#Enhancement#0;class#Inventory#0" expanded="false" />
+                <element signature="e#7439#7440#0" expanded="true" />
+                <element signature="e#7464#7465#0" expanded="true" />
+                <element signature="e#7497#7498#0" expanded="true" />
+                <element signature="e#7525#7526#0" expanded="true" />
+                <element signature="e#7553#7554#0" expanded="true" />
+                <element signature="e#7580#7581#0" expanded="true" />
+                <element signature="e#7617#7618#0" expanded="true" />
+                <element signature="e#7649#7650#0" expanded="true" />
+                <element signature="e#7682#7683#0" expanded="true" />
+                <element signature="e#7711#7712#0" expanded="true" />
+                <element signature="e#7755#7756#0" expanded="true" />
+                <element signature="e#7791#7792#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,9 +71,35 @@
       <file leaf-file-name="Equipment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameBase/Player/Equipment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="207">
+              <caret line="62" column="76" lean-forward="false" selection-start-line="62" selection-start-column="76" selection-end-line="62" selection-end-column="76" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#6699#6700#0" expanded="true" />
+                <element signature="e#6724#6725#0" expanded="true" />
+                <element signature="e#6757#6758#0" expanded="true" />
+                <element signature="e#6785#6786#0" expanded="true" />
+                <element signature="e#6820#6821#0" expanded="true" />
+                <element signature="e#6854#6855#0" expanded="true" />
+                <element signature="e#6905#6906#0" expanded="true" />
+                <element signature="e#6951#6952#0" expanded="true" />
+                <element signature="e#6989#6990#0" expanded="true" />
+                <element signature="e#7027#7028#0" expanded="true" />
+                <element signature="e#7084#7085#0" expanded="true" />
+                <element signature="e#7137#7138#0" expanded="true" />
+                <element signature="e#7171#7172#0" expanded="true" />
+                <element signature="e#7202#7203#0" expanded="true" />
+                <element signature="e#7249#7250#0" expanded="true" />
+                <element signature="e#7289#7290#0" expanded="true" />
+                <element signature="e#7324#7325#0" expanded="true" />
+                <element signature="e#7356#7357#0" expanded="true" />
+                <element signature="e#7405#7406#0" expanded="true" />
+                <element signature="e#7447#7448#0" expanded="true" />
+                <element signature="e#7480#7481#0" expanded="true" />
+                <element signature="e#7509#7510#0" expanded="true" />
+                <element signature="e#7553#7554#0" expanded="true" />
+                <element signature="e#7589#7590#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,8 +107,8 @@
       <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameBase/UserInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="105" column="38" lean-forward="false" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
+            <state relative-caret-position="238">
+              <caret line="14" column="56" lean-forward="true" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -93,8 +117,8 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameBase/Player/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-238">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#601#602#0" expanded="true" />
@@ -118,66 +142,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Market.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GameBase/Market.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="267" column="4" lean-forward="false" selection-start-line="267" selection-start-column="4" selection-end-line="278" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Market#0;class#Market#0" expanded="false" />
-                <element signature="method#ListOffers#0;class#Market#0" expanded="false" />
-                <element signature="method#AddOffer#0;class#Market#0" expanded="false" />
-                <element signature="method#AddMaterial#0;class#Market#0" expanded="false" />
-                <element signature="method#AddArmor#0;class#Market#0" expanded="false" />
-                <element signature="method#AddWeapon#0;class#Market#0" expanded="false" />
-                <element signature="method#BuyOffer#0;class#Market#0" expanded="false" />
-                <element signature="method#ValidChoise#0;class#Market#0" expanded="false" />
-                <element signature="method#GetPlayerInventoryId#0;class#Market#0" expanded="false" />
-                <element signature="method#MakeTrade#0;class#Market#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DatabaseController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DatabaseController/DatabaseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="257" column="37" lean-forward="false" selection-start-line="257" selection-start-column="37" selection-end-line="257" selection-end-column="37" />
+            <state relative-caret-position="473">
+              <caret line="159" column="46" lean-forward="false" selection-start-line="159" selection-start-column="46" selection-end-line="159" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#406#407#0" expanded="true" />
-                <element signature="e#453#454#0" expanded="true" />
-                <element signature="method#LoadPlayers#0;class#DatabaseController#0" expanded="false" />
+                <element signature="e#395#396#0" expanded="true" />
+                <element signature="e#442#443#0" expanded="true" />
                 <element signature="method#LoadInventory#0;class#DatabaseController#0" expanded="false" />
+                <element signature="method#LoadWeapon#0;class#DatabaseController#0" expanded="false" />
                 <element signature="method#QuerryVector#0;class#DatabaseController#0" expanded="false" />
                 <element signature="method#QuerryMaterials#0;class#DatabaseController#0" expanded="false" />
                 <element signature="method#QuerryArmors#0;class#DatabaseController#0" expanded="false" />
-                <element signature="method#QuerryWeapons#0;class#DatabaseController#0" expanded="false" />
                 <element signature="method#QuerryFirst#0;class#DatabaseController#0" expanded="false" />
                 <element signature="method#Querry#0;class#DatabaseController#0" expanded="false" />
+                <marker date="1526211049957" expanded="true" signature="1282:1307" ph="SELECT * FRO... GuildLayout" />
+                <marker date="1526211049957" expanded="false" signature="3113:4027" ph="{...}" />
+                <marker date="1526211049957" expanded="true" signature="3315:3383" ph="SELECT * FRO... Equipment" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Weapon.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GameBase/Items/Weapon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Armor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GameBase/Items/Armor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -185,8 +169,8 @@
       <file leaf-file-name="Offer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameBase/Offer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="27" column="92" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="92" />
+            <state relative-caret-position="459">
+              <caret line="27" column="92" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="92" />
               <folding>
                 <element signature="e#1002#1003#0" expanded="true" />
                 <element signature="e#1039#1040#0" expanded="true" />
@@ -234,11 +218,12 @@
         <option value="$PROJECT_DIR$/src/GameBase/Items/Material.java" />
         <option value="$PROJECT_DIR$/src/GameBase/Offer.java" />
         <option value="$PROJECT_DIR$/src/GameBase/Market.java" />
-        <option value="$PROJECT_DIR$/src/GameBase/UserInterface.java" />
         <option value="$PROJECT_DIR$/src/GameBase/Player/Player.java" />
-        <option value="$PROJECT_DIR$/src/GameBase/GameRoom.java" />
-        <option value="$PROJECT_DIR$/src/DatabaseController/DatabaseController.java" />
         <option value="$PROJECT_DIR$/src/GameBase/Player/Inventory.java" />
+        <option value="$PROJECT_DIR$/src/DatabaseController/DatabaseController.java" />
+        <option value="$PROJECT_DIR$/src/GameBase/Player/Equipment.java" />
+        <option value="$PROJECT_DIR$/src/GameBase/GameRoom.java" />
+        <option value="$PROJECT_DIR$/src/GameBase/UserInterface.java" />
       </list>
     </option>
   </component>
@@ -272,7 +257,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,7 +277,20 @@
               <item name="ConsoleGame" type="b2602c69:ProjectViewProjectNode" />
               <item name="ConsoleGame" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="DatabaseController" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConsoleGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConsoleGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="GameBase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConsoleGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConsoleGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="GameBase" type="462c0819:PsiDirectoryNode" />
+              <item name="Items" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ConsoleGame" type="b2602c69:ProjectViewProjectNode" />
@@ -302,9 +303,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -382,11 +380,12 @@
       <updated>1525528842748</updated>
       <workItem from="1525528849744" duration="17144000" />
       <workItem from="1526108919766" duration="37599000" />
+      <workItem from="1526195172569" duration="12111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54743000" />
+    <option name="totallyTimeSpent" value="66854000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -404,9 +403,8 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14860907" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14787701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -418,6 +416,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -460,13 +459,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/GameBase/GameRoom.java</url>
-          <line>220</line>
+          <line>221</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/GameBase/GameRoom.java</url>
-          <line>164</line>
+          <line>165</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -478,7 +477,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/GameBase/GameRoom.java</url>
-          <line>265</line>
+          <line>266</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
@@ -506,12 +505,209 @@
           <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GameBase/Player/Inventory.java</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="32" />
+      <option name="time" value="36" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/GameBase/GameRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3213">
+          <caret line="391" column="5" lean-forward="false" selection-start-line="383" selection-start-column="4" selection-end-line="391" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#ListAllPlayer#0;class#GameRoom#0" expanded="false" />
+            <element signature="method#RegisterNewPlayer#0;class#GameRoom#0" expanded="false" />
+            <element signature="method#CreateNewGuild#0;class#GameRoom#0" expanded="false" />
+            <element signature="method#EnterMarket#0;class#GameRoom#0" expanded="false" />
+            <element signature="docComment;method#PickGuild#0;class#GameRoom#0" expanded="false" />
+            <element signature="method#PickGuild#0;class#GameRoom#0" expanded="false" />
+            <element signature="docComment;method#PickName#0;class#GameRoom#0" expanded="false" />
+            <element signature="method#PickName#0;class#GameRoom#0" expanded="false" />
+            <element signature="method#ValidateName#0;class#GameRoom#0" expanded="false" />
+            <element signature="method#ValidChoise#0;class#GameRoom#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameBase/Player/Equipment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6699#6700#0" expanded="true" />
+            <element signature="e#6724#6725#0" expanded="true" />
+            <element signature="e#6757#6758#0" expanded="true" />
+            <element signature="e#6785#6786#0" expanded="true" />
+            <element signature="e#6820#6821#0" expanded="true" />
+            <element signature="e#6854#6855#0" expanded="true" />
+            <element signature="e#6905#6906#0" expanded="true" />
+            <element signature="e#6951#6952#0" expanded="true" />
+            <element signature="e#6989#6990#0" expanded="true" />
+            <element signature="e#7027#7028#0" expanded="true" />
+            <element signature="e#7084#7085#0" expanded="true" />
+            <element signature="e#7137#7138#0" expanded="true" />
+            <element signature="e#7171#7172#0" expanded="true" />
+            <element signature="e#7202#7203#0" expanded="true" />
+            <element signature="e#7249#7250#0" expanded="true" />
+            <element signature="e#7289#7290#0" expanded="true" />
+            <element signature="e#7324#7325#0" expanded="true" />
+            <element signature="e#7356#7357#0" expanded="true" />
+            <element signature="e#7405#7406#0" expanded="true" />
+            <element signature="e#7447#7448#0" expanded="true" />
+            <element signature="e#7480#7481#0" expanded="true" />
+            <element signature="e#7509#7510#0" expanded="true" />
+            <element signature="e#7553#7554#0" expanded="true" />
+            <element signature="e#7589#7590#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameBase/UserInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="105" column="38" lean-forward="false" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameBase/Player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1015#1016#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1084#1085#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DatabaseController/DatabaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="257" column="37" lean-forward="false" selection-start-line="257" selection-start-column="37" selection-end-line="257" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="method#LoadInventory#0;class#DatabaseController#0" expanded="false" />
+            <element signature="method#LoadWeapon#0;class#DatabaseController#0" expanded="false" />
+            <element signature="method#QuerryVector#0;class#DatabaseController#0" expanded="false" />
+            <element signature="method#QuerryMaterials#0;class#DatabaseController#0" expanded="false" />
+            <element signature="method#QuerryArmors#0;class#DatabaseController#0" expanded="false" />
+            <element signature="method#QuerryFirst#0;class#DatabaseController#0" expanded="false" />
+            <element signature="method#Querry#0;class#DatabaseController#0" expanded="false" />
+            <marker date="1526211049957" expanded="true" signature="1282:1307" ph="SELECT * FRO... GuildLayout" />
+            <marker date="1526211049957" expanded="false" signature="3113:4027" ph="{...}" />
+            <marker date="1526211049957" expanded="true" signature="3315:3383" ph="SELECT * FRO... Equipment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameBase/Market.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="267" column="4" lean-forward="false" selection-start-line="267" selection-start-column="4" selection-end-line="278" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Market#0;class#Market#0" expanded="false" />
+            <element signature="method#ListOffers#0;class#Market#0" expanded="false" />
+            <element signature="method#AddOffer#0;class#Market#0" expanded="false" />
+            <element signature="method#AddMaterial#0;class#Market#0" expanded="false" />
+            <element signature="method#AddArmor#0;class#Market#0" expanded="false" />
+            <element signature="method#AddWeapon#0;class#Market#0" expanded="false" />
+            <element signature="method#BuyOffer#0;class#Market#0" expanded="false" />
+            <element signature="method#ValidChoise#0;class#Market#0" expanded="false" />
+            <element signature="method#GetPlayerInventoryId#0;class#Market#0" expanded="false" />
+            <element signature="method#MakeTrade#0;class#Market#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameBase/Items/Weapon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameBase/Items/Armor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameBase/Offer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="92" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="92" />
+          <folding>
+            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1039#1040#0" expanded="true" />
+            <element signature="e#1067#1068#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1153#1154#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1252#1253#0" expanded="true" />
+            <element signature="e#1283#1284#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameBase/Player/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#EnhanceItem#0;class#Inventory#0" expanded="false" />
+            <element signature="method#EnhanceWeapon#0;class#Inventory#0" expanded="false" />
+            <element signature="method#EnhanceArmor#0;class#Inventory#0" expanded="false" />
+            <element signature="method#Enhancement#0;class#Inventory#0" expanded="false" />
+            <element signature="e#7439#7440#0" expanded="true" />
+            <element signature="e#7464#7465#0" expanded="true" />
+            <element signature="e#7497#7498#0" expanded="true" />
+            <element signature="e#7525#7526#0" expanded="true" />
+            <element signature="e#7553#7554#0" expanded="true" />
+            <element signature="e#7580#7581#0" expanded="true" />
+            <element signature="e#7617#7618#0" expanded="true" />
+            <element signature="e#7649#7650#0" expanded="true" />
+            <element signature="e#7682#7683#0" expanded="true" />
+            <element signature="e#7711#7712#0" expanded="true" />
+            <element signature="e#7755#7756#0" expanded="true" />
+            <element signature="e#7791#7792#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -593,16 +789,18 @@
           <caret line="103" column="41" lean-forward="true" selection-start-line="103" selection-start-column="41" selection-end-line="103" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="method#LoadPlayers#0;class#DatabaseController#0" expanded="false" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
             <element signature="method#LoadInventory#0;class#DatabaseController#0" expanded="false" />
+            <element signature="method#LoadWeapon#0;class#DatabaseController#0" expanded="false" />
             <element signature="method#QuerryVector#0;class#DatabaseController#0" expanded="false" />
             <element signature="method#QuerryMaterials#0;class#DatabaseController#0" expanded="false" />
             <element signature="method#QuerryArmors#0;class#DatabaseController#0" expanded="false" />
-            <element signature="method#QuerryWeapons#0;class#DatabaseController#0" expanded="false" />
             <element signature="method#QuerryFirst#0;class#DatabaseController#0" expanded="false" />
             <element signature="method#Querry#0;class#DatabaseController#0" expanded="false" />
+            <marker date="1526211049957" expanded="true" signature="1282:1307" ph="SELECT * FRO... GuildLayout" />
+            <marker date="1526211049957" expanded="false" signature="3113:4027" ph="{...}" />
+            <marker date="1526211049957" expanded="true" signature="3315:3383" ph="SELECT * FRO... Equipment" />
           </folding>
         </state>
       </provider>
@@ -611,10 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding>
-            <element signature="e#158#159#0" expanded="false" />
-            <element signature="e#181#182#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -654,6 +848,7 @@
             <element signature="method#ListAllPlayer#0;class#GameRoom#0" expanded="false" />
             <element signature="method#RegisterNewPlayer#0;class#GameRoom#0" expanded="false" />
             <element signature="method#CreateNewGuild#0;class#GameRoom#0" expanded="false" />
+            <element signature="method#EnterMarket#0;class#GameRoom#0" expanded="false" />
             <element signature="docComment;method#PickGuild#0;class#GameRoom#0" expanded="false" />
             <element signature="method#PickGuild#0;class#GameRoom#0" expanded="false" />
             <element signature="docComment;method#PickName#0;class#GameRoom#0" expanded="false" />
@@ -677,10 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding>
-            <element signature="e#158#159#0" expanded="false" />
-            <element signature="e#181#182#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -717,26 +908,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameBase/Items/Weapon.java">
+    <entry file="file://$PROJECT_DIR$/src/GameBase/Offer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="459">
+          <caret line="27" column="92" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="92" />
+          <folding>
+            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1039#1040#0" expanded="true" />
+            <element signature="e#1067#1068#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1153#1154#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1252#1253#0" expanded="true" />
+            <element signature="e#1283#1284#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameBase/Items/Armor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameBase/Market.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="267" column="4" lean-forward="false" selection-start-line="267" selection-start-column="4" selection-end-line="278" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Market#0;class#Market#0" expanded="false" />
+            <element signature="method#ListOffers#0;class#Market#0" expanded="false" />
+            <element signature="method#AddOffer#0;class#Market#0" expanded="false" />
+            <element signature="method#AddMaterial#0;class#Market#0" expanded="false" />
+            <element signature="method#AddArmor#0;class#Market#0" expanded="false" />
+            <element signature="method#AddWeapon#0;class#Market#0" expanded="false" />
+            <element signature="method#BuyOffer#0;class#Market#0" expanded="false" />
+            <element signature="method#ValidChoise#0;class#Market#0" expanded="false" />
+            <element signature="method#GetPlayerInventoryId#0;class#Market#0" expanded="false" />
+            <element signature="method#MakeTrade#0;class#Market#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameBase/Items/Weapon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameBase/Player/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#601#602#0" expanded="true" />
@@ -759,118 +989,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameBase/UserInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/GameBase/Player/Inventory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="105" column="38" lean-forward="false" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameBase/Player/Equipment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameBase/GameRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="391" column="5" lean-forward="true" selection-start-line="383" selection-start-column="4" selection-end-line="391" selection-end-column="5" />
+        <state relative-caret-position="694">
+          <caret line="62" column="72" lean-forward="false" selection-start-line="62" selection-start-column="72" selection-end-line="62" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ListAllPlayer#0;class#GameRoom#0" expanded="false" />
-            <element signature="method#RegisterNewPlayer#0;class#GameRoom#0" expanded="false" />
-            <element signature="method#CreateNewGuild#0;class#GameRoom#0" expanded="false" />
-            <element signature="docComment;method#PickGuild#0;class#GameRoom#0" expanded="false" />
-            <element signature="method#PickGuild#0;class#GameRoom#0" expanded="false" />
-            <element signature="docComment;method#PickName#0;class#GameRoom#0" expanded="false" />
-            <element signature="method#PickName#0;class#GameRoom#0" expanded="false" />
-            <element signature="method#ValidateName#0;class#GameRoom#0" expanded="false" />
-            <element signature="method#ValidChoise#0;class#GameRoom#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameBase/Market.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="267" column="4" lean-forward="false" selection-start-line="267" selection-start-column="4" selection-end-line="278" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Market#0;class#Market#0" expanded="false" />
-            <element signature="method#ListOffers#0;class#Market#0" expanded="false" />
-            <element signature="method#AddOffer#0;class#Market#0" expanded="false" />
-            <element signature="method#AddMaterial#0;class#Market#0" expanded="false" />
-            <element signature="method#AddArmor#0;class#Market#0" expanded="false" />
-            <element signature="method#AddWeapon#0;class#Market#0" expanded="false" />
-            <element signature="method#BuyOffer#0;class#Market#0" expanded="false" />
-            <element signature="method#ValidChoise#0;class#Market#0" expanded="false" />
-            <element signature="method#GetPlayerInventoryId#0;class#Market#0" expanded="false" />
-            <element signature="method#MakeTrade#0;class#Market#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameBase/Offer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="27" column="92" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="92" />
-          <folding>
-            <element signature="e#1002#1003#0" expanded="true" />
-            <element signature="e#1039#1040#0" expanded="true" />
-            <element signature="e#1067#1068#0" expanded="true" />
-            <element signature="e#1094#1095#0" expanded="true" />
-            <element signature="e#1125#1126#0" expanded="true" />
-            <element signature="e#1153#1154#0" expanded="true" />
-            <element signature="e#1186#1187#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1283#1284#0" expanded="true" />
+            <element signature="method#EnhanceItem#0;class#Inventory#0" expanded="false" />
+            <element signature="method#EnhanceWeapon#0;class#Inventory#0" expanded="false" />
+            <element signature="method#EnhanceArmor#0;class#Inventory#0" expanded="false" />
+            <element signature="method#Enhancement#0;class#Inventory#0" expanded="false" />
+            <element signature="e#7439#7440#0" expanded="true" />
+            <element signature="e#7464#7465#0" expanded="true" />
+            <element signature="e#7497#7498#0" expanded="true" />
+            <element signature="e#7525#7526#0" expanded="true" />
+            <element signature="e#7553#7554#0" expanded="true" />
+            <element signature="e#7580#7581#0" expanded="true" />
+            <element signature="e#7617#7618#0" expanded="true" />
+            <element signature="e#7649#7650#0" expanded="true" />
+            <element signature="e#7682#7683#0" expanded="true" />
+            <element signature="e#7711#7712#0" expanded="true" />
+            <element signature="e#7755#7756#0" expanded="true" />
+            <element signature="e#7791#7792#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DatabaseController/DatabaseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="257" column="37" lean-forward="false" selection-start-line="257" selection-start-column="37" selection-end-line="257" selection-end-column="37" />
+        <state relative-caret-position="473">
+          <caret line="159" column="46" lean-forward="false" selection-start-line="159" selection-start-column="46" selection-end-line="159" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="method#LoadPlayers#0;class#DatabaseController#0" expanded="false" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
             <element signature="method#LoadInventory#0;class#DatabaseController#0" expanded="false" />
+            <element signature="method#LoadWeapon#0;class#DatabaseController#0" expanded="false" />
             <element signature="method#QuerryVector#0;class#DatabaseController#0" expanded="false" />
             <element signature="method#QuerryMaterials#0;class#DatabaseController#0" expanded="false" />
             <element signature="method#QuerryArmors#0;class#DatabaseController#0" expanded="false" />
-            <element signature="method#QuerryWeapons#0;class#DatabaseController#0" expanded="false" />
             <element signature="method#QuerryFirst#0;class#DatabaseController#0" expanded="false" />
             <element signature="method#Querry#0;class#DatabaseController#0" expanded="false" />
+            <marker date="1526211049957" expanded="true" signature="1282:1307" ph="SELECT * FRO... GuildLayout" />
+            <marker date="1526211049957" expanded="false" signature="3113:4027" ph="{...}" />
+            <marker date="1526211049957" expanded="true" signature="3315:3383" ph="SELECT * FRO... Equipment" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameBase/Player/Inventory.java">
+    <entry file="file://$PROJECT_DIR$/src/GameBase/Player/Equipment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state relative-caret-position="207">
+          <caret line="62" column="76" lean-forward="false" selection-start-line="62" selection-start-column="76" selection-end-line="62" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3153#3154#0" expanded="true" />
-            <element signature="e#3178#3179#0" expanded="true" />
-            <element signature="e#3211#3212#0" expanded="true" />
-            <element signature="e#3239#3240#0" expanded="true" />
-            <element signature="e#3267#3268#0" expanded="true" />
-            <element signature="e#3294#3295#0" expanded="true" />
-            <element signature="e#3331#3332#0" expanded="true" />
-            <element signature="e#3363#3364#0" expanded="true" />
-            <element signature="e#3396#3397#0" expanded="true" />
-            <element signature="e#3425#3426#0" expanded="true" />
-            <element signature="e#3469#3470#0" expanded="true" />
-            <element signature="e#3505#3506#0" expanded="true" />
+            <element signature="e#6699#6700#0" expanded="true" />
+            <element signature="e#6724#6725#0" expanded="true" />
+            <element signature="e#6757#6758#0" expanded="true" />
+            <element signature="e#6785#6786#0" expanded="true" />
+            <element signature="e#6820#6821#0" expanded="true" />
+            <element signature="e#6854#6855#0" expanded="true" />
+            <element signature="e#6905#6906#0" expanded="true" />
+            <element signature="e#6951#6952#0" expanded="true" />
+            <element signature="e#6989#6990#0" expanded="true" />
+            <element signature="e#7027#7028#0" expanded="true" />
+            <element signature="e#7084#7085#0" expanded="true" />
+            <element signature="e#7137#7138#0" expanded="true" />
+            <element signature="e#7171#7172#0" expanded="true" />
+            <element signature="e#7202#7203#0" expanded="true" />
+            <element signature="e#7249#7250#0" expanded="true" />
+            <element signature="e#7289#7290#0" expanded="true" />
+            <element signature="e#7324#7325#0" expanded="true" />
+            <element signature="e#7356#7357#0" expanded="true" />
+            <element signature="e#7405#7406#0" expanded="true" />
+            <element signature="e#7447#7448#0" expanded="true" />
+            <element signature="e#7480#7481#0" expanded="true" />
+            <element signature="e#7509#7510#0" expanded="true" />
+            <element signature="e#7553#7554#0" expanded="true" />
+            <element signature="e#7589#7590#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameBase/UserInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="56" lean-forward="true" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameBase/GameRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-142">
+          <caret line="75" column="28" lean-forward="false" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#ListAllPlayer#0;class#GameRoom#0" expanded="false" />
+            <element signature="method#RegisterNewPlayer#0;class#GameRoom#0" expanded="false" />
+            <element signature="method#CreateNewGuild#0;class#GameRoom#0" expanded="false" />
+            <element signature="method#EnterMarket#0;class#GameRoom#0" expanded="false" />
+            <element signature="docComment;method#PickGuild#0;class#GameRoom#0" expanded="false" />
+            <element signature="method#PickGuild#0;class#GameRoom#0" expanded="false" />
+            <element signature="docComment;method#PickName#0;class#GameRoom#0" expanded="false" />
+            <element signature="method#PickName#0;class#GameRoom#0" expanded="false" />
+            <element signature="method#ValidateName#0;class#GameRoom#0" expanded="false" />
+            <element signature="method#ValidChoise#0;class#GameRoom#0" expanded="false" />
           </folding>
         </state>
       </provider>

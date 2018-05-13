@@ -11,11 +11,11 @@ public final class UserInterface {
         System.out.println("WELCOME TO THE GAMEROOM");
         System.out.println("You can do the following actions");
         System.out.println("Register a new player or a Guild");
-        System.out.println("Checkout out a player, see his equipment, inventory");
-        System.out.println("Reaquip items, change guilds");
+        //System.out.println("Checkout out a player, see his equipment, inventory");
+        System.out.println("Re equip items, drop them");
         System.out.println("Sell/Buy items at the market");
         System.out.println("Try to enhance your equipment");
-        System.out.println("Make players fight(spar or deathmatch)");
+        //System.out.println("Make players fight(spar or deathmatch)");
         System.out.println();
     }
 
@@ -27,8 +27,8 @@ public final class UserInterface {
         System.out.println("3.Create a new Guild");
         System.out.println("4.Checkout the Market");
         System.out.println("5.Enhance/Drop/Equip an item");
-        System.out.println("6.Player fight");
-        System.out.println("7. Exit");
+        //System.out.println("6.Player fight");
+        System.out.println("6. Exit");
         System.out.print("Enter your action: ");
 
     }
@@ -105,5 +105,27 @@ public final class UserInterface {
        System.out.println("3.Equip an item");
        System.out.println("4.Take off an item");
        System.out.println("Your choise");
+   }
+
+   public static void EnhanceItemInfo()
+   {
+       System.out.println();
+       System.out.println("Enhancing a weapon will cost 15k an armor part 10k and it has 50% success rate");
+       System.out.println("Choose which item you would like to enhance:");
+       System.out.println("1.Weapon");
+       System.out.println("2.Armor");
+       System.out.println("Your choise");
+   }
+
+   public static void EquipItemInfo()
+   {
+       System.out.println();
+       System.out.println("Select which item you would like to equip:");
+   }
+
+   public static void TakeItemOffInfo()
+   {
+       System.out.println();
+       System.out.println("Select which item you would like to take off");
    }
 }

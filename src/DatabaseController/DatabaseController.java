@@ -4,6 +4,7 @@ import GameBase.Guild;
 import GameBase.Items.Armor;
 import GameBase.Items.Material;
 import GameBase.Items.Weapon;
+import GameBase.Player.Equipment;
 import GameBase.Player.Inventory;
 import GameBase.Player.Player;
 
@@ -13,8 +14,6 @@ import java.util.Vector;
 public class DatabaseController {
 
     private static Connection con;
-    private static boolean hasData = false;
-
 
     public DatabaseController()
     {
@@ -75,6 +74,11 @@ public class DatabaseController {
 
     }
 
+    /**
+     *
+     * @param player Username
+     * @return players inventory Id, Gold, and players username
+     */
     public Inventory LoadInventory(String player)
     {
         Inventory inventory = null;
@@ -99,6 +103,101 @@ public class DatabaseController {
         return inventory;
     }
 
+    /**
+     *
+     * @param player Username
+     * @return players equipment id, Damage, Protection, Accuracy, Parry, and players username
+     */
+    public Equipment LoadEquipment(String player)
+    {
+        Equipment equipment = null;
+        if (con == null) GetConnection();
+        try {
+            Statement statement = con.createStatement();
+            ResultSet rs = statement.executeQuery("SELECT * FROM Equipment WHERE Player = " + "'" + player + "' LIMIT 1;");
+
+            //Parse out results
+            while (rs.next())
+            {
+                equipment = new Equipment(
+                        rs.getInt("Id"),
+                        rs.getInt("TotalDamage"),
+                        rs.getInt("TotalProtection"),
+                        rs.getFloat("Accuracy"),
+                        rs.getFloat("ParryRate"),
+                        rs.getString("Player")
+                );
+            }
+            rs.close();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return equipment;
+        }
+        return equipment;
+
+    }
+
+    public Armor LoadArmor(String sql)
+    {
+        Armor armor = null;
+        if (con == null) GetConnection();
+        try {
+            Statement statement = con.createStatement();
+            ResultSet rs = statement.executeQuery(sql);
+
+            //Parse out results
+            while (rs.next())
+            {
+                armor = new Armor(
+                        rs.getInt("Id"),
+                        rs.getString("Name"),
+                        rs.getInt("Protection"),
+                        rs.getFloat("ParryRate"),
+                        rs.getString("ArmorPart"),
+                        rs.getString("ArmorType"),
+                        rs.getInt("Inventory"),
+                        rs.getInt("Equipment")
+                );
+            }
+            rs.close();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return armor;
+        }
+        return armor;
+
+    }
+    public Weapon LoadWeapon(String sql)
+    {
+        Weapon weapon = null;
+        if (con == null) GetConnection();
+        try {
+            Statement statement = con.createStatement();
+            ResultSet rs = statement.executeQuery(sql);
+
+            //Parse out results
+            while (rs.next())
+            {
+                weapon = new Weapon(
+                        rs.getInt("Id"),
+                        rs.getString("Name"),
+                        rs.getInt("Damage"),
+                        rs.getFloat("Accuracy"),
+                        rs.getInt("Inventory"),
+                        rs.getInt("Equipment")
+                );
+            }
+            rs.close();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return weapon;
+        }
+        return weapon;
+
+    }
     /**
      *
      * @param sql statement to be executed
@@ -271,8 +370,5 @@ public class DatabaseController {
 
         }
     }
-
-
-
 
 }

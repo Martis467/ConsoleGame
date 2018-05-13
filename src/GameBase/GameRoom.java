@@ -1,6 +1,7 @@
 package GameBase;
 
 import DatabaseController.DatabaseController;
+import GameBase.Player.Equipment;
 import GameBase.Player.Inventory;
 import GameBase.Player.Player;
 
@@ -70,11 +71,11 @@ public class GameRoom {
                     ActWithPlayer();
                     break;
 
-                case 6:
+                /*case 6:
                     //Player fight
-                    break;
+                    break;*/
 
-                case 7:
+                case 6:
                     //Exit
                     option = -1;
                     break;
@@ -290,7 +291,9 @@ public class GameRoom {
         Player pl = playerList.elementAt(choise-1);
 
         Inventory inventory = db.LoadInventory(pl.getUsername());
+        Equipment equipment = db.LoadEquipment(pl.getUsername());
         inventory.SetDB(db);
+        equipment.SetDB(db);
 
         UserInterface.ActWithPlayerInfo();
 
@@ -299,9 +302,9 @@ public class GameRoom {
         switch (choise)
         {
             case 1: inventory.DropItem(pl); break;
-            case 2: inventory.EnchanceItem(pl); break;
-            case 3: inventory.EquipItem(pl); break;
-            case 4: inventory.TakeOffItem(pl); break;
+            case 2: inventory.EnhanceItem(pl); break;
+            case 3: equipment.EquipItem(); break;
+            case 4: equipment.TakeOffItem(); break;
             default: break;
         }
 
@@ -389,18 +392,6 @@ public class GameRoom {
             return false;
         }
         return true;
-    }
-    private int GetPlayerInventoryId(String username)
-    {
-        String sql = "SELECT Id FROM Inventory WHERE "
-                + "Player = " + "'" + username + "'"
-                + " LIMIT 1;";
-        int inventoryId = db.QuerryFirst(sql,"Id");
-
-        if (inventoryId == -1)
-            System.out.println("Something went very very wrong while adding a material, player has no inventory");
-
-        return inventoryId;
     }
 
 }
