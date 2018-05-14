@@ -51,27 +51,39 @@ public class Equipment {
         Scanner scanner = new Scanner(System.in);
         int choise = scanner.nextInt();
 
-        if (!ValidChoise(choise, 0, weapons.capacity() + armors.capacity()))
+        if (!ValidChoise(choise, 0, weapons.size() + armors.size()))
             choise = scanner.nextInt();
 
-        if (!ValidChoise(choise, 0, weapons.capacity() + armors.capacity()))
+        if (!ValidChoise(choise, 0, weapons.size() + armors.size()))
             return;
 
-        if(choise > weapons.capacity())
+        if(!db.Querry("BEGIN;")) System.out.println("Could not begin transaction");
+
+        if(choise > weapons.size())
         {
             //Get equipped armor
-            Armor inArmor = armors.elementAt(choise - weapons.capacity() - 1);
-            Armor eqArmor = db.LoadArmor("SELECT * FROM Armor WHERE Equipment = " + id + "AND ArmorPart =" + "'" + inArmor.aPart + "';");
+            Armor inArmor = armors.elementAt(choise - weapons.size() - 1);
+            Armor eqArmor = db.LoadArmor("SELECT * FROM Armor WHERE Equipment = " + id + " AND ArmorPart =" + "'" + inArmor.aPart + "';");
 
             totalProtection = totalProtection - eqArmor.protection + inArmor.protection;
             parryRate = parryRate - eqArmor.parry + inArmor.parry;
 
             String takeOff = "UPDATE Armor SET Inventory = " + this.id + ", Equipment = NULL" + " WHERE Id ="
-                    + eqArmor.id + "AND ArmorPart =" + "'" + inArmor.aPart + "';";
+                    + eqArmor.id + " AND ArmorPart =" + "'" + inArmor.aPart + "';";
             String equip = "UPDATE Armor SET Equipment = " + this.id + ", Inventory = NULL" + " WHERE Id ="
-                    + inArmor.id + "AND ArmorPart =" + "'" + eqArmor.aPart + "';";
+                    + inArmor.id + " AND ArmorPart =" + "'" + eqArmor.aPart + "';";
             String equipmentUpdate = "UPDATE Equipment SET TotalProtection =" + totalProtection
-                    + ", ParryRate =" + parryRate + " WHERE Id=" + this.id + ";";
+                    + ", ParryRate =" + Math.round(parryRate) + " WHERE Id=" + this.id + ";";
+            if (db.Querry(takeOff) && db.Querry(equip) && db.Querry(equipmentUpdate))
+            {
+                System.out.println("Item change successfully");
+                db.Querry("COMMIT;");
+            }
+            else
+            {
+                System.out.println("Something went wrong while re equipping an armor part");
+                db.Querry("ROLLBACK;");
+            }
         }
         else
         {
@@ -84,8 +96,8 @@ public class Equipment {
             accuracy = accuracy -  eqWeapon.accuracy + inWeapon.accuracy;
 
             String takeOff = "UPDATE Weapon SET Inventory = " + this.id + ", Equipment = NULL WHERE Id =" + eqWeapon.id + ";";
-            String equip = "UPDATE Weapon SET Equipment =" + this.id + ", Invetory = NULL WHERE Id =" + inWeapon.id + ";";
-            String equipmentUpdate = "UPDATE Equipment SET TotalDamage =" + totalDamage + ", Accuracy =" + accuracy + " WHERE Id=" + this.id + ";";
+            String equip = "UPDATE Weapon SET Equipment =" + this.id + ", Inventory = NULL WHERE Id =" + inWeapon.id + ";";
+            String equipmentUpdate = "UPDATE Equipment SET TotalDamage =" + totalDamage + ", Accuracy =" + round(accuracy, 2) + " WHERE Id=" + this.id + ";";
 
             if (db.Querry(takeOff) && db.Querry(equip) && db.Querry(equipmentUpdate))
                 System.out.println("Item change successfully");
@@ -115,10 +127,10 @@ public class Equipment {
         Scanner scanner = new Scanner(System.in);
         int choise = scanner.nextInt();
 
-        if (!ValidChoise(choise, 0, 1 + armors.capacity()))
+        if (!ValidChoise(choise, 0, 1 + armors.size()))
             choise = scanner.nextInt();
 
-        if (!ValidChoise(choise, 0, 1 + armors.capacity()))
+        if (!ValidChoise(choise, 0, 1 + armors.size()))
             return;
 
         if (choise == 1)
@@ -127,7 +139,7 @@ public class Equipment {
             accuracy -= weapon.accuracy;
 
             String takeOff = "UPDATE Weapon SET Inventory = " + this.id+ ", Equipment = NULL WHERE Id =" + weapon.id + ";";
-            String equipmentUpdate = "UPDATE Equipment SET TotalDamage =" + totalDamage + ", Accuracy =" + accuracy + " WHERE Id=" + this.id + ";";
+            String equipmentUpdate = "UPDATE Equipment SET TotalDamage =" + totalDamage + ", Accuracy =" + round(accuracy, 2) + " WHERE Id=" + this.id + ";";
 
             if (db.Querry(takeOff) && db.Querry(equipmentUpdate))
                 System.out.println("Weapon has now been moved to inventory");
@@ -141,7 +153,7 @@ public class Equipment {
             parryRate -= armor.parry;
 
             String takeOff = "UPDATE Armor SET Inventory = " + this.id+ ", Equipment = NULL WHERE Id =" + weapon.id + ";";
-            String equipmentUpdate = "UPDATE Equipment SET TotalDamage =" + totalDamage + ", Accuracy =" + accuracy + " WHERE Id=" + this.id + ";";
+            String equipmentUpdate = "UPDATE Equipment SET TotalProtection =" + totalProtection + ", ParryRate =" + round(parryRate, 2) + " WHERE Id=" + this.id + ";";
 
             if (db.Querry(takeOff) && db.Querry(equipmentUpdate))
                 System.out.println("Armor has now been moved to inventory");
@@ -160,6 +172,10 @@ public class Equipment {
             return false;
         }
         return true;
+    }
+
+    public static double round(double value, int scale) {
+        return Math.round(value * Math.pow(10, scale)) / Math.pow(10, scale);
     }
 
 

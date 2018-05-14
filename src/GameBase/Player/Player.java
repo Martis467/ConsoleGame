@@ -62,7 +62,7 @@ public class Player {
         String sql = "SELECT " + col + " "
                     + "FROM GuildLayout "
                     + "WHERE GuildMember = '" + username + "'"
-                    + "LIMIT 1;";
+                    + " LIMIT 1;";
         int gold = db.QuerryFirst(sql, col);
 
         if(gold - fee >= 0) return true;

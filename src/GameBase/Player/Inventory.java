@@ -46,40 +46,34 @@ public class Inventory {
         });
         materials.forEach(mat -> {
             System.out.println(i.get() + "." + mat.name + "\t\t" + mat.quantity);
+            i.getAndIncrement();
         });
 
         Scanner scanner = new Scanner(System.in);
         int choise = scanner.nextInt();
 
-        if (!ValidChoise(choise, 0, weapons.capacity() + armors.capacity() + materials.capacity()))
+        if (!ValidChoise(choise, 0, weapons.size() + armors.size() + materials.size()))
             choise = scanner.nextInt();
 
-        if (!ValidChoise(choise, 0, weapons.capacity() + armors.capacity() + materials.capacity()))
+        if (!ValidChoise(choise, 0, weapons.size() + armors.size() + materials.size()))
             return;
 
         //Creating Sql statement
-        String table;
+        String table = "";
         int id;
-        int stack = weapons.capacity(); //A temp var for measuring which item to delete;
+        int stack = weapons.size(); //A temp var for measuring which item to delete;
 
-        if(choise > stack) stack = armors.capacity();
-        else
+        if(choise <= stack)
         {
             table = "Weapon";
             id = weapons.elementAt(choise - 1).id;
         }
+        else stack += armors.size();
 
-        if (choise > stack) stack += materials.capacity();
-        else
+        if (choise <= stack)
         {
             table = "Armor";
             id = armors.elementAt(choise - stack - 1).id;
-        }
-
-        if (choise > stack)
-        {
-            System.out.println("Something went wrong in Dropping item");
-            return;
         }
         else
         {
@@ -107,12 +101,10 @@ public class Inventory {
         if (!ValidChoise(choise, 0, 2))
             return;
 
-        Vector<Armor> armors = db.QuerryArmors("SELECT * FROM Armor WHERE Inventory = " + id +";");
-
         switch (choise)
         {
-            case 1: EnhanceWeapon(player);
-            case 2: EnhanceArmor(player);
+            case 1: EnhanceWeapon(player); break;
+            case 2: EnhanceArmor(player); break;
         }
 
     }
@@ -138,10 +130,10 @@ public class Inventory {
         Scanner scanner = new Scanner(System.in);
         int choise = scanner.nextInt();
 
-        if(!ValidChoise(choise,0,weapons.capacity()))
+        if(!ValidChoise(choise,0,weapons.size()))
             choise = scanner.nextInt();
 
-        if(!ValidChoise(choise,0,weapons.capacity()))
+        if(!ValidChoise(choise,0,weapons.size()))
             return;
 
         //Enhance chosen weapon
@@ -155,14 +147,14 @@ public class Inventory {
 
     private void EnhanceArmor(Player player)
     {
-        if(!player.HasEnoughMoney(db, 15000))
+        if(!player.HasEnoughMoney(db, 10000))
         {
             System.out.println("Player does not have enough money");
             return;
         }
         Vector<Armor> armors = db.QuerryArmors("SELECT * FROM Armor WHERE Inventory = " + id +";");
 
-        System.out.println("Choose which weapon you would like to enhance:");
+        System.out.println("Choose which armor you would like to enhance:");
 
         AtomicInteger i = new AtomicInteger(1);
 
@@ -174,10 +166,10 @@ public class Inventory {
         Scanner scanner = new Scanner(System.in);
         int choise = scanner.nextInt();
 
-        if(!ValidChoise(choise,0,armors.capacity()))
+        if(!ValidChoise(choise,0,armors.size()))
             choise = scanner.nextInt();
 
-        if(!ValidChoise(choise,0,armors.capacity()))
+        if(!ValidChoise(choise,0,armors.size()))
             return;
 
         //Enhance chosen weapon
@@ -207,7 +199,7 @@ public class Inventory {
 
         //Adjust player gold
         gold -= cost;
-        String sql = "UPDATE Player SET Gold = " + gold + "WHERE Id =" + id +";";
+        String sql = "UPDATE Inventory SET Gold = " + gold + " WHERE Id =" + id +";";
         if (!db.Querry(sql)) System.out.println("Something went wrong when updating players gold");
 
 
